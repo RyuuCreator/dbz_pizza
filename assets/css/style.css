@@ -1,0 +1,515 @@
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    background-color: black;
+}
+
+.header img {
+    width: auto;
+    height: 35%;
+}
+
+#dbzLogo,
+#pizzaLogo {
+    font-family: didoni-urw,serif;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 8.9rem;
+    margin: 0 1rem;
+}
+
+#dbzLogo {
+    color: red;
+}
+
+#pizzaLogo {
+    color: yellow;
+}
+
+/* MAIN CONTENT */
+
+.main {
+    width: 100%;
+    background-color: #ff7f50;
+}
+
+/* FLYERS */
+
+.flyers {
+    position: relative;
+    height: 90rem;
+    font-family: anton, sans-serif;
+}
+
+.rate {
+    text-align: center;
+    position: absolute;
+    left: 18%;
+    top: 27%;
+    font-size: 3.4rem;
+    font-weight: 500;
+    transform: translate(-50%);
+}
+
+.payment {
+    text-align: center;
+    position: absolute;
+    left: 16%;
+    top: 60%;
+    font-size: 3.4rem;
+    z-index: 1;
+    transform: translate(-50%);
+}
+
+.goku {
+    position: absolute;
+    left: 32%;
+    transform: translate(-50%);
+    filter: drop-shadow(-2.5rem 2.5rem 3rem #00000050);
+}
+
+.flying {
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.phone {
+    position: absolute;
+    left: 65%;
+    top: 3%;
+    font-size: 8.9rem;
+    transform: translate(-50%);
+}
+
+.product {
+    text-align: center;
+    position: absolute;
+    left: 70%;
+    top: 18%;
+    font-size: 2.1rem;
+    transform: translate(-50%);
+}
+
+.address {
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    left: 75%;
+    top: 20%;
+    font-size: 5.5rem;
+    transform: translate(-50%);
+}
+
+.address div {
+    margin-top: 5rem;
+}
+
+.social {
+    position: absolute;
+    left: 70%;
+    top: 78%;
+    font-size: 2.1rem;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%);
+}
+
+.social a {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0.8rem;
+}
+
+.social img {
+    width: 100%;
+}
+
+/* PIZZA RECIPE */
+
+.pizza10,
+.pizza12,
+.pizzaTomato,
+.pizzaCream,
+.pizza14,
+.dessert5,
+.dessert6 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: roboto;
+}
+
+.pizza10,
+.pizza12,
+.pizza14,
+.dessert5,
+.dessert6 {
+    padding: 2.1rem 0;
+}
+
+.pizza10 h2,
+.pizza12 h2,
+.pizza14 h2,
+.dessert5 h2,
+.dessert6 h2 {
+    font-size: 3.4rem;
+    font-family: anton, sans-serif;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.pizza10 :is(h3, p),
+.pizza12 :is(h3, p),
+.pizza14 :is(h3, p),
+.dessert5 :is(h3, p),
+.dessert6 :is(h3, p) {
+    font-size: 2.1rem;
+    z-index: 1;
+}
+
+.pizza10 h3,
+.pizza12 h3,
+.pizza14 h3,
+.dessert5 h3,
+.dessert6 h3 {
+    font-weight: 900;
+}
+
+.pizza10 p,
+.pizza12 p,
+.pizza14 p,
+.dessert5 p,
+.dessert6 p {
+    text-shadow: #fff 2px 0px 0px, #fff 1.75517px 0.958851px 0px, #fff 1.0806px 1.68294px 0px,
+        #fff 0.141474px 1.99499px 0px, #fff -0.832294px 1.81859px 0px, #fff -1.60229px 1.19694px 0px,
+        #fff -1.97998px 0.28224px 0px, #fff -1.87291px -0.701566px 0px, #fff -1.30729px -1.5136px 0px,
+        #fff -0.421592px -1.95506px 0px, #fff 0.567324px -1.91785px 0px, #fff 1.41734px -1.41108px 0px,
+        #fff 1.92034px -0.558831px 0px;
+}
+
+.pizzaRecipe,
+.dessertRecipe {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pizza,
+.dessert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 40%;
+    height: 20rem;
+    margin: 1.5rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 2rem #00000050;
+}
+
+.pizza :is(h3, p),
+.dessert :is(h3, p) {
+    width: 50%;
+    margin: 0.8rem 0;
+}
+
+.pizza:hover,
+.dessert:hover {
+    box-shadow: 0 0 2rem #00000075;
+}
+
+.pizza:hover .portrait,
+.pizza:hover .dragonBall,
+.dessert:hover .portrait {
+    opacity: 1;
+}
+
+.dragonBall {
+    height: 30%;
+    position: absolute;
+    bottom: 15%;
+    left: 9%;
+    opacity: 0.5;
+}
+
+.portrait {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 30rem;
+    color: white;
+    background: url(../img/shadowGoku.png) center/auto 85% no-repeat, black;
+    font-size: 2.1rem;
+    font-family: roboto;
+}
+
+.contactSocial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 50%;
+}
+
+.phoneFooter {
+    font-size: 3.4rem;
+}
+
+.socialFooter {
+    display: flex;
+    align-items: center;
+}
+
+.socialFooter a {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0.8rem;
+}
+
+.socialFooter img {
+    width: 100%;
+}
+
+.socialFooterMobile {
+    display: none;
+}
+
+.addressRadar {
+    height: 100%;
+    width: 40%;
+}
+
+.addressFooter {
+    padding-top: 3.4rem;
+    text-align: right;
+}
+
+.addressFooter div {
+    margin: 1.3rem 0;
+}
+
+.phoneFooter,
+.rateFooter {
+    margin-bottom: 1.5rem;
+}
+
+.rateFooter,
+.socialFooter {
+    margin-top: 3rem;
+}
+
+.radar {
+    position: relative;
+    bottom: 4rem;
+    width: 30rem;
+    height: 30rem;
+    background: url(../img/radar.png) center/auto 100% no-repeat;
+    float: right;
+    shape-outside: circle(49% at 50% 44%);
+}
+
+@media only screen and (max-width: 768px) {
+    /* HEADER MOBILE */
+    .header {
+        height: 10rem;
+    }
+    
+    .header img {
+        height: 40%;
+    }
+
+    #dbzLogo,
+    #pizzaLogo {
+        font-size: 5.5rem;
+    }
+
+    /* FLYERS MOBILE */
+    .flyers {
+        width: 90%;
+        height: 60rem;
+        margin: 0 auto;
+    }
+
+    .flyers br {
+        display: none;
+    }
+
+    .rate {
+        font-size: 2.1rem;
+        width: 100%;
+        left: 0;
+        top: 65%;
+        transform: translate(0%);
+        text-align: left;
+    }
+
+    .payment {
+        font-size: 2.1rem;
+        width: 100%;
+        left: 0;
+        top: 72%;
+        transform: translate(0%);
+        text-align: left;
+    }
+
+    .flying {
+        width: 100%;
+        height: 100%;
+    }
+
+    .goku {
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        opacity: 0.5;
+        transform: translate(-50%, -50%)
+    }
+
+    .phone {
+        width: 100%;
+        font-size: 5.5rem;
+        left: 0;
+        top: 5%;
+        transform: translate(0%);
+    }
+
+    .product {
+        font-size: 2.1rem;
+        width: 100%;
+        left: 0%;
+        top: 85%;
+        transform: translate(0%);
+        text-align: left;
+    }
+
+    .address {
+        width: 100%;
+        font-size: 3.4rem;
+        left: 0;
+        top: 15%;
+        transform: translate(0%);
+        text-align: left;
+    }
+
+    .address div {
+        margin-top: 2rem;
+    }
+
+    .address br {
+        display: block;
+    }
+
+    .social {
+        display: none;
+    }
+
+    /* RECIPE MOBILE */
+
+    .pizza {
+        width: 80%;
+    }
+
+    .pizza:hover .portrait,
+    .pizza:hover .dragonBall {
+        opacity: 0.5;
+    }
+
+    .portrait,
+    .dragonBall {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .pizza :is(h3, p) {
+        width: 80%;
+        margin: 0.8rem 0;
+    }
+
+    /* FOOTER MOBILE*/
+
+    .footer {
+        flex-direction: column;
+        height: 61rem;
+        background: url(../img/shadowGokuMobile.png) center/auto 50% no-repeat, black;
+    }
+
+    .contactSocial,
+    .addressRadar,
+    .socialFooterMobile {
+        height: auto;
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .socialFooter {
+        display: none;
+    }
+
+    .socialFooterMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socialFooterMobile div {
+        display: flex;
+        margin: 1rem 0;
+    }
+
+    .socialFooterMobile div a {
+        width: 5rem;
+        height: 5rem;
+        margin: 0 2rem;
+    }
+
+    .socialFooterMobile div img {
+        width: 100%;
+    }
+
+    .addressFooter {
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+
+    .radar {
+        display: none;
+    }
+}
